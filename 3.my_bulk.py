@@ -1,8 +1,4 @@
-# -*- coding: utf-8 -*-
-import sys
-
-reload(sys)
-sys.setdefaultencoding('utf-8')
+# -*- coding: utf-8 -*
 
 """
 @author: Jiang Ke
@@ -83,6 +79,6 @@ if __name__ == "__main__":
         if len(dirs) > 0:
             for dir in dirs:
                 json_path = root + windows_linux + dir
-                print json_path
+                print(json_path)
                 generate_json(json_path)
-    print 'Over_________'
+    print('Over_________')

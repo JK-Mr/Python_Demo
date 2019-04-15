@@ -1,8 +1,4 @@
 # -*- coding: utf-8 -*-
-import sys
-
-reload(sys)
-sys.setdefaultencoding('utf-8')
 
 """
 @author: Jiang Ke
@@ -33,7 +29,7 @@ if __name__ == "__main__":
     for l in range(1, 2):
         html = post('http://med.wanfangdata.com.cn/Author/GetPaperList', l, 'A000000001')
         # 返回信息
-        print html.text
+        print(html.text)
         # 返回响应头
-        print html.status_code
-    print "OK"
+        print(html.status_code)
+    print("OK")

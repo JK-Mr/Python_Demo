@@ -1,8 +1,4 @@
 # -*- coding: utf-8 -*-
-import sys
-
-reload(sys)
-sys.setdefaultencoding('utf-8')
 
 """
 @author: Jiang Ke
@@ -50,7 +46,8 @@ def get_soup(html_content):
     soup = BeautifulSoup(html_content, 'html.parser')
     if soup is None:
         soup = get_soup(html_content)
-        print 'soup type is NoneType'
+        print
+        'soup type is NoneType'
     return soup
 
 
@@ -116,11 +113,11 @@ def pageNumber(ID, pageStart, pageOver):
         else:
             continue
 
-        print ('页面连接是：http://med.wanfangdata.com.cn/Author/General/' + ID + '' + '页码是：%d' % l)
+        print('页面连接是：http://med.wanfangdata.com.cn/Author/General/' + ID + '' + '页码是：%d' % l)
 
 
 if __name__ == "__main__":
     # 前两位id指定范围
     # 后两位页码指定范围
     ID(999999, 1000000, 1, 2)
-    print 'Over_________'
+    print('Over_________')

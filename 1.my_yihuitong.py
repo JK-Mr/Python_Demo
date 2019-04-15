@@ -1,8 +1,4 @@
 # -*- coding: utf-8 -*-
-import sys
-
-reload(sys)
-sys.setdefaultencoding('utf-8')
 
 """
 @author: Jiang Ke
@@ -135,7 +131,7 @@ def getHtml(url):
         data = r.content.decode(encoding, 'ignore').encode('utf-8')
         r.close()
         if data is None:
-            print 'data is None'
+            print('data is None')
             data = getHtml(url)
         return data
     except Exception as e:
@@ -147,7 +143,7 @@ def get_soup(html_content):
     soup = BeautifulSoup(html_content, 'html.parser')
     if soup is None:
         soup = get_soup(html_content)
-        print 'soup type is NoneType'
+        print('soup type is NoneType')
     return soup
 
 
@@ -288,7 +284,7 @@ def do_clawer(urls):
     for url in urls:
         # exist是否存在
         exist = is_exist(url)
-        print url
+        print(url)
         if exist:
             continue
         else:
@@ -303,4 +299,4 @@ if __name__ == '__main__':
         urls.append(url)
     do_clawer(urls)
     generate_json()
-    print 'Over_________'
+    print('Over_________')
